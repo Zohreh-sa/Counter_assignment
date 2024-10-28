@@ -5,26 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create a counter</title>
-    <link rel="stylesheet" href="./styles.css" </head>
+    <link rel="stylesheet" href="./styles.css"> 
+    <!-- Lost a > sign there :) -->
+</head>
 
 <body>
     <h1>Try the counter!</h1>
     <div class="container">
         <div class="counter-box" id="counter">0</div>
         <div class="buttons">
+            <!-- 
+                Right now it's ok to assing a function right from the html. 
+                But if you would have many scripts together, it would be hard for you to know, 
+                from which script these functions come from. 
+                Usually, its a good idea to separate logic out of html. 
+                Html only for structure, css only for styles, js only for functionality
+            -->
             <button onclick="increase()">+</button>
-            <button onclick="decrease()">-</button>
+            <button onclick="decrease()">-</button> 
+            <!-- I would swap - and + signs for intuitivity (left is -, right is +). But maybe its just me -->
             <button onclick="reset()">Reset</button>
-
         </div>
-
-
     </div>
-
-
-
-
-
+    <!-- Cleaning up the indentations -->
 
     <script src="./scripts.js"></script>
 </body>

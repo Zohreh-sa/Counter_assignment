@@ -2,6 +2,12 @@
     background-color: blue;
 }  */
 
+/* 
+We have not done responsive UI much and not focusing on it this course, but its always nice to have.
+Here you assign width of your main container as 10% of the width. Try open your solution in mobile view
+via developer tools and you will see how small your counter has become
+*/
+
 .container {
     display: flex;
     flex-direction: column;
