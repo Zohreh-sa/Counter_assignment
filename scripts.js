@@ -1,35 +1,64 @@
 console.log("Hello World!");
-console.log("hi again!");
+
+//catching elements
+const display =document.getElementById("display");
+const plusButton=document.getElementById("increase");
+const minusButton = document.getElementById("decrease");
+const resetButton = document.getElementById("reset");
+const message=document.getElementById("message");
+
+let counter=0;
+const maxCount = 20;
 
 
-let count = 0
-const maxCount = 5
-
+//update counter, status of decrement button and show proper messages
 function updateCounter() {
-    document.getElementById("counter").innerText = count;
-}
+    display.textContent = counter; //update counter
 
-function increase() {
+    minusButton.disabled = counter<=0; //Disable minus button
 
-    if (count < maxCount) {
-        count++;
-        updateCounter();
-    } else {
-        alert(`You have reached the maximum limit!`);
+    if (counter===10){
+        message.textContent = "You have free shipping";
+    } else if (counter===20){
+        message.textContent ="Out of stock";
+        
+    } else{
+        message.textContent ="";
+    }
+
+    if(counter===20){
+        plusButton.style.backgroundColor = "red";
+        plusButton.style.color = "white";
+    }else{
+        plusButton.style.backgroundColor = "";
+        plusButton.style.color = "";
     }
 }
 
-function decrease() {
-    if (count > 0) {
-        count--;
+
+//increment of counter
+plusButton.addEventListener("click",()=> {
+
+    if (counter < maxCount) {
+        counter++;
+        updateCounter();
+    } 
+});
+
+// decrement of counter
+minusButton.addEventListener("click", () => {
+    if (counter > 0) {
+        counter--;
         updateCounter();
     }
-}
+});
 
-
-function reset() {
-    count = 0;
+// reset counter
+resetButton.addEventListener("click",()=> {
+    counter = 0;
     updateCounter();
 
-}
+});
+
+updateCounter(); //update the initial counter
 

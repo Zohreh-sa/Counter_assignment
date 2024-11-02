@@ -7,17 +7,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 10%;
+    max-width: 200px;    
+    min-width: 10%;
     height: 200px;
     background-color: white;
     padding: 20px;
     border-width: 5px;
     border-style: groove;
 
-
 }
 
-.counter-box {
+
+.display {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,4 +42,10 @@ button {
     display: inline-flex;
     font-size: 16pt;
 
+}
+
+.message{
+    margin-top:20px;
+    font-size: 10pt;
+    color: blue;
 }
