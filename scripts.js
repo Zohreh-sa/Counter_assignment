@@ -5,7 +5,7 @@ const display =document.getElementById("display");
 const plusButton=document.getElementById("increase");
 const minusButton = document.getElementById("decrease");
 const resetButton = document.getElementById("reset");
-const messageBox=document.getElementById("messageBox");
+const messageBox=document.getElementById("message");
 let counter=0;
 const maxCount = 20;
 

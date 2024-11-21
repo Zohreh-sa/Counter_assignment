@@ -48,11 +48,20 @@ button {
 
 }
 
-.message{
+/* .message{
     margin-top:20px;
-    font-size: 10pt;
     color: blue;
     font-size: 16pt;
-    margin-left: 40px;
     
+} */
+
+.messageBox{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    color: red;
+    font-size: 14pt;
+   margin: 15px;
+
 }
