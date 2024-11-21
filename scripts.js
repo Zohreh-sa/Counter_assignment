@@ -5,8 +5,7 @@ const display =document.getElementById("display");
 const plusButton=document.getElementById("increase");
 const minusButton = document.getElementById("decrease");
 const resetButton = document.getElementById("reset");
-const message=document.getElementById("message");
-
+const messageBox=document.getElementById("messageBox");
 let counter=0;
 const maxCount = 20;
 
@@ -17,10 +16,10 @@ function updateCounter() {
 
     minusButton.disabled = counter<=0; //Disable minus button
 
-    if (counter===10){
-        message.textContent = "You have free shipping";
+    if (counter>=10 && counter!=20){
+        messageBox.textContent = "You have free shipping";
     } else if (counter===20){
-        message.textContent ="Out of stock";
+        messageBox.textContent ="Out of stock";
         
     } else{
         message.textContent ="";
